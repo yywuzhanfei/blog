@@ -15,11 +15,11 @@
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
         <h2 class="ui teal header item">Blog</h2>
-        <a href="#" class="item"><i class="home icon"></i>Home</a>
-        <a href="#" class="item"><i class="idea icon"></i>Classification</a>
-        <a href="#" class="item"><i class="tags icon"></i>Tag</a>
-        <a href="#" class="item"><i class="info icon"></i>About me</a>
-        <div class="right item">
+        <a href="#" class="menu-item item m-mobile-hide"><i class="home icon"></i>Home</a>
+        <a href="#" class="menu-item item m-mobile-hide"><i class="idea icon"></i>Classification</a>
+        <a href="#" class="menu-item item m-mobile-hide"><i class="tags icon"></i>Tag</a>
+        <a href="#" class="menu-item item m-mobile-hide"><i class="info icon"></i>About me</a>
+        <div class="right menu-item item m-mobile-hide">
           <div class="ui icon inverted transparent input">
             <input type="text" placeholder="Search">
             <i class="search icon link"></i>
@@ -27,7 +27,9 @@
         </div>
       </div>
     </div>
-    
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+      <i class="sidebar icon"></i>
+    </a>
   </nav>
 
   <!-- main content -->
@@ -330,7 +332,12 @@
 
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/n pm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.menu-item').toggleClass('m-mobile-hide');
+    });
+  </script>
 </body>
 </html>
